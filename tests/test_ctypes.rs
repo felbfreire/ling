@@ -34,3 +34,12 @@ fn test_ctypes_vec_add_range_for() {
     assert_eq!(vec!(1, 2, 3, 4, 5, 6), cap_vec);
 }
 
+#[test]
+fn test_slice() {
+    let mut vec = ctypes::vector();
+    let full_slice = &mut vec[..];
+    let not_full_slice = &mut vec[0, 1]?;
+
+    assert_eq!(&[1, 2, 3], full_slice);
+    assert_eq!(&[1, 2], not_full_slice);
+}
