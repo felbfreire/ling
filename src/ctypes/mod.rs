@@ -7,3 +7,11 @@ pub fn vector() -> Vec<u8> {
 
     vector
 }
+
+pub fn option(x: u8) -> Option<u8> {
+    if x > 1 {
+        Some(x)
+    } else {
+        None
+    }
+}

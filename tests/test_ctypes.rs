@@ -38,8 +38,16 @@ fn test_ctypes_vec_add_range_for() {
 fn test_slice() {
     let mut vec = ctypes::vector();
     let full_slice = &mut vec[..];
-    let not_full_slice = &mut vec[0, 1]?;
+    let not_full_slice = &mut vec[0, 1];
 
     assert_eq!(&[1, 2, 3], full_slice);
     assert_eq!(&[1, 2], not_full_slice);
+}
+
+fn test_option_type() {
+    let some = ctypes::option(3);
+    let none = ctypes::option(0);
+
+    assert_eq!(Some(1), some);
+    assert_eq!(None, none);
 }
