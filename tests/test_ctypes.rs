@@ -36,12 +36,13 @@ fn test_ctypes_vec_add_range_for() {
 
 #[test]
 fn test_slice() {
-    let mut vec = ctypes::vector();
-    let full_slice = &mut vec[..];
-    let not_full_slice = &mut vec[0, 1];
+    let mut vec1 = ctypes::vector();
+    let mut vec2 = ctypes::vector();
+    let full_slice = &mut vec1[..];
+    let not_full_slice = &mut vec2[0..2];
 
     assert_eq!(&[1, 2, 3], full_slice);
-    assert_eq!(&[1, 2], not_full_slice);
+    assert_eq!(&[1, 2], not_full_slice); // cant borrow
 }
 
 fn test_option_type() {
