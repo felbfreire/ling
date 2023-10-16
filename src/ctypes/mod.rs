@@ -15,3 +15,9 @@ pub fn option(x: u8) -> Option<u8> {
         None
     }
 }
+
+pub fn an_array() -> [u8; 3] {
+    let arr: [u8; 3] = [1, 2, 3];
+
+    arr
+}

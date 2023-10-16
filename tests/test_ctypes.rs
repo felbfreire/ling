@@ -52,3 +52,9 @@ fn test_option_type() {
     assert_eq!(Some(1), some);
     assert_eq!(None, none);
 }
+
+fn test_array_type() {
+    let arr = ctypes::an_array();
+
+    assert_eq!([1, 2, 3], arr);
+}
