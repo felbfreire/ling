@@ -45,16 +45,19 @@ fn test_slice() {
     assert_eq!(&[1, 2], not_full_slice); // cant borrow
 }
 
+#[test]
 fn test_option_type() {
     let some = ctypes::option(3);
     let none = ctypes::option(0);
 
-    assert_eq!(Some(1), some);
+    assert_eq!(Some(3), some);
     assert_eq!(None, none);
 }
 
+#[test]
 fn test_array_type() {
     let arr = ctypes::an_array();
 
     assert_eq!([1, 2, 3], arr);
 }
+
