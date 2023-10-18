@@ -22,3 +22,10 @@ pub fn an_array() -> [u8; 3] {
                                   // compile time
     arr
 }
+
+pub fn a_box() ->Box<u8> {
+    let a_box = Box::new(34); // box has a predefined size
+                              // and is the simplest way for
+                              // heap allocation.
+    a_box
+}

@@ -61,3 +61,10 @@ fn test_array_type() {
     assert_eq!([1, 2, 3], arr);
 }
 
+#[test]
+fn test_box_type() {
+    let boxed34 = ctypes::a_box();
+
+    assert_eq!(Box::new(34), boxed34);
+    assert_eq!(34, *boxed34);
+}
