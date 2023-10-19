@@ -68,3 +68,15 @@ fn test_box_type() {
     assert_eq!(Box::new(34), boxed34);
     assert_eq!(34, *boxed34);
 }
+
+#[test]
+fn test_result_type() {
+    let nonzero = ctypes::result(23);
+    let error = ctypes::result(0);
+
+    assert_eq!(Ok(23), nonzero);
+    assert_eq!(nonzero.is_ok(), true);
+
+    assert_eq!(Err("nonzero cant be zero"), error);
+    assert_eq!(error.is_ok(), false);
+}

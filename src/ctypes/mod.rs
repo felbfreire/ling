@@ -29,3 +29,11 @@ pub fn a_box() ->Box<u8> {
                               // heap allocation.
     a_box
 }
+
+pub fn result(nonzero: u32) -> Result<u32, &'static str> {
+    if nonzero > 0 {
+        Ok(nonzero)
+    } else {
+        Err("nonzero cant be zero")
+    }
+}
