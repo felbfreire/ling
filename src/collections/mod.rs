@@ -23,3 +23,11 @@ pub fn make_vecdeque() -> collections::VecDeque<&'static str> {
     a_vecdeque
 }
 
+// Maps
+
+pub fn make_hashmap() -> collections::HashMap<&'static str, u8> {
+    let mut a_hashmap =  collections::HashMap::new();
+
+    a_hashmap.insert("three", 3);
+
+    a_hashmap}

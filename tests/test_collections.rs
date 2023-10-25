@@ -25,3 +25,9 @@ fn test_vecdeque() {
 
 }
 
+#[test]
+fn test_hashmap() {
+    let mut a_hashmap = ling::collections::make_hashmap();
+
+    assert_eq!(3 , a_hashmap["three"]);
+}
