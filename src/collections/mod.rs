@@ -31,3 +31,11 @@ pub fn make_hashmap() -> collections::HashMap<&'static str, u8> {
     a_hashmap.insert("three", 3);
 
     a_hashmap}
+
+// Sets
+
+pub fn make_hashset<T>() -> collections::HashSet<T> {
+    let a_hashset = collections::HashSet::new();
+
+    a_hashset
+}

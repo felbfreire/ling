@@ -31,3 +31,14 @@ fn test_hashmap() {
 
     assert_eq!(3 , a_hashmap["three"]);
 }
+
+#[test]
+fn test_hashset() {
+    let mut a_hashset = ling::collections::make_hashset();
+
+    a_hashset.insert("lol");
+
+    assert_eq!(a_hashset.contains("lol"), true);
+    assert_eq!(!a_hashset.contains("lol"), false);
+}
+
